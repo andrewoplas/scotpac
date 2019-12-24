@@ -22,12 +22,13 @@ $(document).ready(function() {
   });
 
   // Mega Menu
+  // $('.mega-menu').hide();
   $('.solutions-dropdown').dropdown();
-  $('.solutions-dropdown').on('show.bs.dropdown', function() {
-    $('.mega-menu').show(1000);
+  $('.solutions-dropdown').on('shown.bs.dropdown', function() {
+    $('.mega-menu').show();
   });
 
-  $('.solutions-dropdown').on('hide.bs.dropdown', function() {
+  $('.solutions-dropdown').on('hidden.bs.dropdown', function() {
     $('.mega-menu').hide();
   });
 });
