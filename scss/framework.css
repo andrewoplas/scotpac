@@ -340,11 +340,11 @@
 }
 
 .btn.border-gray {
-  border: 2px solid #ebeaed;
+  border: 2px solid #f2f2f2;
 }
 
 .btn.border-gray:hover {
-  border-color: #b7b3be;
+  border-color: #bfbfbf;
 }
 
 .btn.border-light {
@@ -457,7 +457,7 @@
 }
 
 .input.border-gray {
-  border: 2px solid #ebeaed;
+  border: 2px solid #f2f2f2;
 }
 
 .input.border-light {
@@ -493,7 +493,7 @@
 }
 
 .input.focus-gray:focus {
-  border-color: #ebeaed;
+  border-color: #f2f2f2;
 }
 
 .input.focus-light:focus {
@@ -565,15 +565,15 @@
 }
 
 .input.placeholder-gray::-moz-placeholder {
-  color: #ebeaed;
+  color: #f2f2f2;
 }
 
 .input.placeholder-gray::-webkit-input-placeholder {
-  color: #ebeaed;
+  color: #f2f2f2;
 }
 
 .input.placeholder-gray:-ms-input-placeholder {
-  color: #ebeaed;
+  color: #f2f2f2;
 }
 
 .input.placeholder-action-1::-moz-placeholder {
@@ -692,7 +692,7 @@ input[type=checkbox].border-transparent-white + label:before, input[type=radio].
 }
 
 input[type=checkbox].border-gray + label:before, input[type=radio].border-gray + label:before {
-  border: 2px solid #ebeaed;
+  border: 2px solid #f2f2f2;
 }
 
 input[type=checkbox].border-light + label:before, input[type=radio].border-light + label:before {
@@ -732,7 +732,7 @@ input[type=checkbox].bg-transparent-white + label:before, input[type=radio].bg-t
 }
 
 input[type=checkbox].bg-gray + label:before, input[type=radio].bg-gray + label:before {
-  background-color: #ebeaed;
+  background-color: #f2f2f2;
 }
 
 input[type=checkbox].bg-light + label:before, input[type=radio].bg-light + label:before {
@@ -773,8 +773,8 @@ input[type=checkbox].focus-white:checked + label:before, input[type=radio].focus
 }
 
 input[type=checkbox].focus-gray:checked + label:before, input[type=radio].focus-gray:checked + label:before {
-  border-color: #ebeaed;
-  background-color: #ebeaed;
+  border-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 
 input[type=checkbox].focus-light:checked + label:before, input[type=radio].focus-light:checked + label:before {
@@ -1113,7 +1113,7 @@ input[type=radio] + label:before {
   top: 100%;
   left: 0;
   right: 0;
-  border-top: 2px solid #ebeaed;
+  border-top: 2px solid #f2f2f2;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: opacity 0.25s;
@@ -1308,7 +1308,7 @@ input[type=radio] + label:before {
 
 /* Change some Bootstrap's styles */
 .table-striped tbody tr:nth-of-type(odd) {
-  background-color: rgba(235, 234, 237, 0.5);
+  background-color: rgba(242, 242, 242, 0.5);
 }
 
 /* Classes for all elements */
@@ -12569,11 +12569,11 @@ input[type=radio] + label:before {
 }
 
 .color-gray {
-  color: #ebeaed;
+  color: #f2f2f2;
 }
 
 .color-gray.link:hover {
-  color: #b7b3be;
+  color: #bfbfbf;
 }
 
 .color-red {
@@ -12630,7 +12630,7 @@ input[type=radio] + label:before {
 }
 
 .bg-gray {
-  background-color: #ebeaed;
+  background-color: #f2f2f2;
 }
 
 .bg-action-1 {
