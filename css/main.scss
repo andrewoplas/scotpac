@@ -1,4 +1,6 @@
-@import '../scss/style.scss';
+@import '../scss/variables.scss';
+@import 'framework.scss';
+@import '../scss/layout.scss';
 
 .height-100 {
   height: 100% !important;
@@ -9,10 +11,26 @@ html {
 }
 
 .play.violet {
+  width: 90px;
+  height: 90px;
   background-color: $color_blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -47px;
+
+  @media only screen and (max-width: 576px) {
+    width: 58px;
+    height: 58px;
+    margin-top: -40px;
+  }
 
   i {
     color: white !important;
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    transform: none !important;
   }
 }
 
@@ -52,11 +70,31 @@ html {
         width: 188px;
       }
 
+      @media (min-width: 577px) and (max-width: 768px) {
+        margin-right: 20px;
+      }
+
       @media only screen and (max-width: 576px) {
         padding-top: 0 !important;
         padding-bottom: 0 !important;
       }
     }
+
+    &.link-partners {
+      padding: 37px 29px !important; 
+    }
+    &.link-about-us {
+      padding: 37px 21px !important;
+    }
+
+    &.link-contact-us {
+      padding: 37px 0px 37px 23px !important;
+    }
+
+  }
+
+  #login-dropdown {
+    padding-right: 12px;
   }
 
   .dropdown {
@@ -65,8 +103,10 @@ html {
 
   .dropdown-toggle:after {
     content: '\f078';
-    font-size: 12px;
+    font-size: 15px;
     margin-left: 7px;
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 500;
   }
 
   .contact-details {
@@ -75,10 +115,12 @@ html {
     font-size: 28px;
 
     i {
-      font-size: 22px;
+      font-size: 24px;
       color: $color_pink;
-      margin-right: 12px;
+      margin-right: 0px;
       transform: rotateY(180deg);
+      margin-top: 41px;
+      display: inline-block;
     }
   }
 
@@ -113,19 +155,24 @@ html {
       padding-top: 5px;
       padding-bottom: 5px;
     }
-    .contact-details .fa-phone {
-      font-size: 32px;
-      margin-right: -50px;
-      margin-top: 13px;
 
-      @media only screen and (max-width: 576px) {
-        font-size: 28px;
-        margin-right: -80px;
-        margin-top: 1px;
+    .contact-details.phone {
+      margin-right: 50px;
+
+      .fa-phone {
+        font-size: 32px;
+        margin-right: -50px;
+        margin-top: 13px;
+
+        @media only screen and (max-width: 576px) {
+          font-size: 28px !important;
+          margin-right: -56px !important;
+        }
       }
     }
 
-    .contact-details .fa-bars {
+    .contact-details.bars .fa-bars {
+      margin-top: 0;
       font-size: 40px;
       margin-left: 5px;
       color: #5124fc !important;
@@ -133,9 +180,22 @@ html {
 
       @media only screen and (max-width: 576px) {
         margin: 0;
-        margin-top: 4px;
-        margin-right: 5px;
+        margin-top: 10px;
+        margin-right: 2px;    
         font-size: 36px;
+      }
+    }
+
+    .link {
+      padding: 15px !important;
+      font-size: 20px !important;
+
+      &.logo {
+        img {
+          @media only screen and (max-width: 576px) {
+            width: 120px !important;
+          }
+        }
       }
     }
   }
@@ -154,6 +214,7 @@ html {
   padding: 50px 40px;
   position: absolute;
   background: white;
+  z-index: 999;
 
   span.item,
   span.product-item {
@@ -189,11 +250,14 @@ html {
     background: rgba(242, 242, 242, 0.5);
     padding: 10px 15px;
     margin-bottom: 10px;
+    flex-grow: 1;
 
     .product-item {
       color: #74747c;
       cursor: pointer;
-      margin-bottom: 5px;
+      margin: 5px 0;
+      font-size: 16px;
+      line-height: 36px;
 
       &:hover {
         color: $color_blue;
@@ -210,6 +274,18 @@ html {
       }
     }
   }
+
+  .add-top-xs {
+    @media only screen and (max-width: 767px) {
+      margin-top: 30px;
+    }
+  }
+  
+  .remove-pl-xs {
+    @media only screen and (max-width: 767px) {
+      padding-left: 0;
+    }
+  }
 }
 
 /*=========================================================
@@ -221,24 +297,25 @@ html {
 */
 .home_landing {
   min-height: 700px;
+  border-right: 16px solid #fedd3e;
 
   .main-container {
     margin-left: 103px;
   }
 
   .landing-right-caret {
-    font-size: 120px;
+    font-size: 128px;
     position: absolute;
-    margin-top: 9px;
-    color: $color_blue;
+    margin-top: 6px;
+    color: #5124fb;
   }
 
   .landing-left-caret {
-    font-size: 120px;
+    font-size: 128px;
     position: absolute;
-    bottom: 54px;
-    right: 140px;
-    color: $color_pink !important;
+    bottom: 45px;
+    right: 128px;
+    color: #ff4e62 !important;
 
     @media only screen and (max-width: 1199px) {
       right: -300px;
@@ -275,7 +352,7 @@ html {
     line-height: 70px;
     color: $color_blue;
     margin-top: -6px;
-    margin-left: -2px;
+    margin-left: 4px;
 
     .heading-alt {
       color: $color_pink !important;
@@ -290,7 +367,7 @@ html {
     line-height: 32px;
     color: rgba(21, 20, 57, 0.6);
     margin-top: 27px;
-    margin-left: -3px;
+    margin-left: 3px;
   }
 
   .action-1 {
@@ -302,12 +379,12 @@ html {
     background: #ff4d62;
     margin-top: 39px;
     width: 225px;
-    margin-left: -5px;
+    margin-left: 3px;
   }
 
   .google-reviews-container {
     margin-top: 41px;
-    margin-left: -4px;
+    margin-left: 3px;
     display: flex;
     align-items: center;
 
@@ -334,33 +411,30 @@ html {
   padding: 50px 0px;
 
   .landing-right-caret {
-    width: 35px;
+    font-size: 45px;
     position: absolute;
-    margin-top: -5px;
-    margin-left: 5%;
+    margin-top: 1px;
+    margin-left: 4%;
+    color: #5124fb;
   }
 
   .landing-left-caret {
-    width: 35px;
+    font-size: 45px;
     position: absolute;
-    top: 70px;
-    right: 5%;
+    top: 82px;
+    right: 8%;
+    color: #ff4e62 !important;
   }
 
   .heading {
     font-family: Noto Serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 46px;
+    font-size: 36px;
     line-height: 40px;
     color: $color_blue;
     width: 70%;
     margin: auto;
-
-    @media only screen and (max-width: 430px) {
-      font-size: 30px;
-      width: 60%;
-    }
 
     .heading-alt {
       color: $color_pink !important;
@@ -372,14 +446,14 @@ html {
     font-family: Poppins;
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
-    line-height: 32px;
+    font-size: 17px;
+    line-height: 27px;
     color: rgba(21, 20, 57, 0.6);
     width: 80%;
   }
 
   .action-1 {
-    margin-top: 45px;
+    margin-top: 36px;
     font-family: Poppins;
     font-style: normal;
     font-weight: 500;
@@ -390,16 +464,16 @@ html {
     margin-left: auto;
     margin-right: auto;
     display: block;
-    width: 300px;
-    height: 65px;
-    padding: 6px;
+    width: 225px;
+    height: 52px;
   }
 
   .landing-xs-bg {
-    height: 300px;
+    height: 218px;
     width: 100%;
 
     img {
+      margin-top: -32px;
       width: 100%;
     }
   }
@@ -423,19 +497,19 @@ html {
     position: relative;
 
     .header {
-      padding-top: 83px;
+      padding-top: 84px;
       font-family: Noto Serif;
       font-style: normal;
       font-weight: 500;
       font-size: 48px;
       line-height: 52px;
       text-align: center;
-      letter-spacing: -0.4px;
+      letter-spacing: 0.2px;
       color: #ffffff;
     }
 
     .description {
-      margin-top: 33px;
+      margin-top: 31px;
       font-family: Poppins;
       font-style: normal;
       font-weight: 500;
@@ -491,24 +565,75 @@ html {
     }
 
     .content {
-      padding: 30px 0 30px 30px;
+      padding: 30px 0 30px 27px;
       margin: 0 10px;
       flex: 1;
 
       &:nth-child(1) {
         background: #ffebfe;
+
+        i {
+          font-size: 102px;
+          margin-top: 25px;
+          margin-left: -7px;
+        }
       }
 
       &:nth-child(2) {
         background: linear-gradient(125.41deg, #f2f2f2 3.53%, #f2f2f2 90.56%);
+
+        i {
+          margin-top: 26px;
+          margin-left: 9px;
+          font-size: 105px;
+        }
+
+        .header {
+          margin-top: 31px;
+        }
+
+        .description {
+          margin-top: 11px;
+        }
       }
 
       &:nth-child(3) {
         background: linear-gradient(123.26deg, #e2deff 1.64%, #e2deff 96.95%);
+
+        i {
+          margin-top: 18px;
+          margin-left: 7px;      
+        }
+
+        .description {
+          margin-top: 9px;
+          margin-left: 6px;
+        }
+
+        .header {
+          margin-top: 37px;
+          margin-left: 5px;
+        }
       }
 
       &:nth-child(4) {
         background: #e4f3e3;
+
+        i {
+          margin-left: 11px;
+          margin-top: 18px;
+          font-size: 110px;
+        }
+
+        .header {
+          margin-top: 32px;
+          margin-left: 3px; 
+        }
+
+        .description {
+          margin-top: 9px;
+          margin-left: 2px;
+        }
       }
 
       i.main-icon {
@@ -556,6 +681,7 @@ html {
       line-height: 32px;
       text-decoration-line: underline;
       color: #5000fe;
+      margin-top: 4px;
     }
   }
 
@@ -582,15 +708,15 @@ html {
     padding-bottom: 25px;
 
     .header {
+      padding: 0 40px;
       font-family: Noto Serif;
       font-style: normal;
       font-weight: 500;
-      font-size: 34px;
-      line-height: 40px;
+      font-size: 24px;
+      line-height: 32px;
       text-align: center;
       letter-spacing: -0.4px;
-      color: $color_blue;
-      padding: 0 58px;
+      color: #5124FB;
     }
 
     .description {
@@ -606,7 +732,7 @@ html {
   }
 
   .business-tabs {
-    margin-top: 38px;
+    margin-top: 13px;
 
     .business-select {
       font-family: Poppins;
@@ -619,7 +745,7 @@ html {
       display: block;
       width: 100%;
       border-radius: 0;
-      padding: 15px 15px;
+      padding: 17px 15px;
     }
   }
 
@@ -636,27 +762,90 @@ html {
 
     .content {
       padding: 25px 22px;
+      padding-right: 5px;
       margin: 0 10px 20px 10px;
       flex: 1;
 
       &:nth-child(1) {
         background: #ffebfe;
+
+        i {
+          font-size: 59px;
+          margin-top: 5px;
+          margin-left: -4px;
+        }
+
+        .header {
+          margin-left: -4px;
+          margin-top: 14px;
+        }
+
+        .description {
+          margin-top: -10px;
+          margin-left: -4px;
+        }
       }
 
       &:nth-child(2) {
         background: linear-gradient(125.41deg, #f2f2f2 3.53%, #f2f2f2 90.56%);
+
+        i {
+          margin-top: 10px;
+          margin-left: -3px;
+        }
+
+        .header {
+          margin-top: 13px;
+          margin-left: -4px;
+        }
+
+        .description {
+          margin-top: -6px;
+          margin-left: -3px;
+      
+        }
       }
 
       &:nth-child(3) {
         background: linear-gradient(123.26deg, #e2deff 1.64%, #e2deff 96.95%);
+
+        i {
+          margin-top: 5px;
+          margin-left: -4px;
+        }
+
+        .header {
+          margin-top: 15px;
+          margin-left: -4px;
+        }
+
+        .description {
+          margin-top: -7px;
+          margin-left: -4px;      
+        }
       }
 
       &:nth-child(4) {
         margin-bottom: 0 !important;
         background: #e4f3e3;
+
+        i {
+          font-size: 74px;
+          margin-left: 3px;
+        }
+
+        .header {
+          margin-top: 9px;
+          margin-left: -4px;
+        }
+
+        .description {
+          margin-top: -7px;
+          margin-left: -4px;
+        }
       }
 
-      i.main-icon {
+      i {
         font-size: 4em;
       }
 
@@ -690,7 +879,7 @@ html {
 
     .other-industries {
       width: 100%;
-      padding: 35px;
+      padding: 31px 35px;
       font-family: Poppins;
       font-style: normal;
       font-weight: 500;
@@ -707,7 +896,15 @@ html {
 */
 .testimonial {
   background-color: #f2f2f2;
-  margin-top: 13px;
+  margin-top: 21px;
+
+  @media only screen and (max-width: 576px) {
+    margin-top: 12px;
+  }
+
+  img {
+    width: 100%;
+  }
 
   @media screen and (max-width: 576px) {
     .remove-xs-padding {
@@ -723,26 +920,32 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 520px;
     height: 100%;
+    padding-left: 32px;
+    padding-right: 75px;
 
     @media only screen and (max-width: 768px) {
       padding-top: 50px;
+      height: 300px;
     }
 
-    .quote {
-      margin-top: -222px;
-      margin-right: 15px;
-      flex-grow: 0;
-      font-family: Noto Serif;
-      font-weight: normal;
-      font-size: 144px;
-      line-height: 26px;
-      text-align: center;
-      color: #fc4f65;
+    .inner-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+
+      .quote {
+        margin-right: 17px;
+        margin-top: 45px;
+        font-family: Noto Serif;
+        font-size: 144px;
+        color: #fc4f65;
+        display: flex;
+      }
     }
 
     .header {
-      padding-right: 20px;
       font-family: Noto Serif;
       font-weight: 500;
       font-size: 36px;
@@ -763,7 +966,8 @@ html {
   }
 
   .quote-container-xs {
-    padding: 50px 15px;
+    padding: 37px 9px;
+    margin-bottom: 19px;
 
     .quote {
       font-family: Noto Serif;
@@ -780,6 +984,8 @@ html {
       font-size: 28px;
       line-height: 36px;
       color: $color_blue;
+      margin-left: 5px;
+      margin-top: -5px;
     }
 
     .person {
@@ -790,6 +996,8 @@ html {
       letter-spacing: 2px;
       text-transform: uppercase;
       color: rgba(21, 20, 57, 0.6);
+      margin-top: 15px;
+      margin-left: 4px;
     }
   }
 }
@@ -801,6 +1009,10 @@ html {
   margin-top: 13px;
   background: url('../i/why-scottish-pacific-bg.png');
 
+  @media only screen and (max-width: 576px) {
+    margin-top: 20px;
+  }
+
   .action-button-container {
     max-width: 600px;
 
@@ -810,8 +1022,8 @@ html {
       color: #ffffff;
       border-radius: 0;
       position: absolute;
-      bottom: 103px;
-      left: 122px;
+      bottom: 101px;
+      left: 101px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -834,7 +1046,7 @@ html {
   .why-scottish-pacific-container {
     max-width: 650px;
     margin-left: -7px;
-    padding: 100px 60px 100px 90px;
+    padding: 100px 40px 100px 101px;
 
     @media only screen and (max-width: 1000px) {
       text-align: left;
@@ -843,7 +1055,7 @@ html {
 
     @media only screen and (max-width: 576px) {
       text-align: center;
-      padding: 76px 29px;
+      padding: 75px 29px 76px 29px;
       margin-left: 0;
     }
 
@@ -869,6 +1081,13 @@ html {
       font-size: 18px;
       line-height: 27px;
       color: #ffffff;
+
+      @media only screen and (max-width: 576px) {
+        font-size: 16px;
+        line-height: 24px;
+        margin-top: 22px;
+        padding: 0 12px;
+      }
     }
 
     .action-1 {
@@ -882,15 +1101,29 @@ html {
       text-align: center;
       color: #ffffff;
       border-radius: 0;
+
+      @media only screen and (max-width: 576px) {
+        margin-top: 37px;
+        width: 300px;
+        margin: 42px 21px 13px 21px;
+      }
     }
   }
 
   .reasons-list {
     margin-top: 43px;
 
+    @media only screen and (max-width: 576px) {
+      margin-top: 33px;
+    }
+
     .list-item {
       display: flex;
       margin-bottom: 46px;
+
+      @media only screen and (max-width: 576px) {
+        margin-bottom: 25px;
+      }
 
       &:last-child {
         margin-bottom: 0;
@@ -903,6 +1136,41 @@ html {
         margin-right: 45px;
         margin-top: 6px;
         color: white !important;
+
+        &.award-winning-icon {
+          margin-left: 12px;
+          font-size: 58px;
+
+          @media only screen and (max-width: 576px) {
+            font-size: 38px;
+            margin-left: 30px;
+            margin-right: 13px;
+            margin-top: 16px;
+          }
+        }
+
+        &.fast-approvals-icon {
+          margin-left: 4px;
+          font-size: 63px;
+
+          @media only screen and (max-width: 576px) {
+            font-size: 43px;
+            margin-left: 17px;
+            margin-right: 13px;
+          }
+        }
+
+        &.freedom-icon {
+          font-size: 68px;
+          margin-left: 8px;
+          margin-top: 2px;
+
+          @media only screen and (max-width: 576px) {
+            font-size: 48px;
+            margin-left: 17px;
+            margin-right: 13px;
+          }
+        }
       }
 
       img {
@@ -949,6 +1217,12 @@ html {
             line-height: 36px;
             letter-spacing: -0.4px;
           }
+
+          &.award-winning {
+            @media only screen and (max-width: 576px) {
+              line-height: 31px;
+            } 
+          }
         }
 
         .description {
@@ -964,6 +1238,7 @@ html {
             font-size: 17px;
             text-align: left;
             margin-bottom: 0;
+            margin-top: 10px;
           }
         }
       }
@@ -972,13 +1247,13 @@ html {
 
   .triangle {
     position: absolute;
-    left: -30px;
+    left: -43px;
     top: 108px;
     width: 0;
     height: 0;
-    border-top: 63px solid transparent;
-    border-right: 58px solid $color_blue;
-    border-bottom: 63px solid transparent;
+    border-top: 75px solid transparent;
+    border-right: 58px solid #5124fb;
+    border-bottom: 75px solid transparent;
   }
 }
 
@@ -1023,7 +1298,7 @@ html {
       }
 
       img {
-        margin-top: 70px !important;
+        margin-top: 37px !important;
         width: 85% !important;
         display: block;
         margin-left: auto;
@@ -1035,11 +1310,17 @@ html {
   .calculate {
     height: 688px;
     background: #ffebfe;
-    padding: 77px 117px;
+    padding: 77px 97px;
+    padding-bottom: 0;
     height: 100%;
 
+    @media (min-width: 577px) and (max-width: 767px) {
+      padding-bottom: 97px;
+    }
+
     @media only screen and (max-width: 576px) {
-      padding: 55px 32px;
+      padding: 59px 25px;
+      padding-bottom: 35px;
     }
 
     .calculate-container {
@@ -1047,6 +1328,10 @@ html {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      
+      @media only screen and (max-width: 576px) {
+        margin-top: 10px;
+      }
     }
 
     .calculate-item {
@@ -1067,6 +1352,13 @@ html {
         font-weight: bold;
         font-size: 70px !important;
         margin-right: 15px;
+
+        @media only screen and (max-width: 576px) {
+          font-weight: bold;
+          font-size: 59px !important;
+          margin-right: 21px;
+          margin-left: -12px;
+        }
       }
     }
 
@@ -1099,12 +1391,12 @@ html {
     }
 
     .description {
-      margin-top: 20px;
+      margin-top: 27px;
       display: block;
       font-family: Poppins;
       font-style: normal;
       font-weight: 500;
-      font-size: 18px;
+      font-size: 20px;
       line-height: 32px;
       color: #62626d;
       mix-blend-mode: normal;
@@ -1122,8 +1414,8 @@ html {
     }
 
     img {
-      margin-top: 50px;
-      width: 400px;
+      margin-top: 55px;
+      width: 419px;
 
       @media only screen and (max-width: 1098px) {
         width: 200px;
@@ -1145,7 +1437,7 @@ html {
     img {
       align-self: flex-start;
       width: 200px;
-      margin-left: -40px;
+      margin-left: -68px;
       margin-top: -32px;
 
       @media only screen and (max-width: 913px) {
@@ -1160,7 +1452,9 @@ html {
       font-size: 36px;
       line-height: 42px;
       color: $color_blue;
-      margin-left: -15px;
+      margin-left: -25px;
+      margin-top: 3px;
+  
 
       @media only screen and (max-width: 975px) {
         font-size: 30px;
@@ -1177,7 +1471,7 @@ html {
       font-size: 20px;
       line-height: 32px;
       color: $color_blue;
-      margin-left: -15px;
+      margin-left: -20px;
 
       @media only screen and (max-width: 913px) {
         font-size: 15px;
@@ -1189,7 +1483,7 @@ html {
   .asset {
     height: 344px;
     background: #e4f3e3;
-    padding: 30px 30px;
+    padding: 30px 33px;
 
     @media only screen and (max-width: 1151px) {
       height: 100%;
@@ -1200,8 +1494,9 @@ html {
     }
 
     img {
-      width: 200px;
-      margin-left: -40px;
+      width: 282px;
+      margin-left: -82px;
+      margin-top: -4px;
     }
 
     .header {
@@ -1241,7 +1536,7 @@ html {
   .business {
     height: 344px;
     background: #fc4f65;
-    padding: 30px 30px;
+    padding: 30px 35px;
 
     @media only screen and (max-width: 1151px) {
       height: 100%;
@@ -1252,8 +1547,9 @@ html {
     }
 
     img {
-      width: 200px;
-      margin-left: -40px;
+      width: 260px;
+      margin-left: -72px;
+      margin-top: -7px;
     }
 
     .header {
@@ -1263,6 +1559,8 @@ html {
       font-size: 30px;
       line-height: 42px;
       color: white;
+      margin-top: 13px;
+      margin-left: -2px;
 
       @media only screen and (max-width: 1284px) {
         font-size: 25px;
@@ -1295,6 +1593,8 @@ html {
 * CALL US TODAY SECTION
 */
 .call_us_today {
+  margin-top: 23px !important;
+
   &-container {
     height: 286px;
     padding: 40px 20px;
@@ -1342,6 +1642,35 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #f2f2f2;
+
+  .trustpilot-carousel {
+    width: 100%;
+    height: 100%;
+    padding: 0 40px;
+
+    .slick-list,
+    .slick-track {
+      height: 100%;
+    }
+
+    .slick-track {
+      display: flex !important;
+    }
+
+    .slick-slide {
+      height: inherit !important;
+      padding: 0 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
 
   img {
     width: auto;
@@ -1352,11 +1681,13 @@ html {
 * OUR AWARDS SECTION
 */
 .our_awards {
-  padding: 95px 0 95px 0;
+  padding: 85px 0 95px 0;
 
   @media only screen and (max-width: 576px) {
     padding-left: 50px;
     padding-right: 50px;
+    padding-top: 38px;
+    padding-bottom: 21px;
   }
 
   .our-awards-text {
@@ -1380,7 +1711,7 @@ html {
     font-size: 36px;
     line-height: 52px;
     text-align: center;
-    letter-spacing: -0.4px;
+    letter-spacing: 0.2px;
     color: $color_blue;
 
     @media only screen and (max-width: 576px) {
@@ -1404,9 +1735,9 @@ html {
   padding: 20px 0;
   background: #f2f2f2;
   height: 150px;
-  margin-top: 13px;
+  margin-top: 40px;
 
-  @media only screen and (max-width: 576px) {
+  @media only screen and (max-width: 768px) {
     height: auto;
   }
 
@@ -1416,12 +1747,19 @@ html {
     height: 100%;
   }
 
+  .vertical-middle {
+    @media only screen and (max-width: 767px) {
+      padding: 0;
+    }
+  }
+
   @media only screen and (max-width: 768px) {
     padding: 40px 20px;
   }
 
   @media only screen and (max-width: 576px) {
-    padding: 40px 13px;
+    padding: 40px 27px;
+    padding-bottom: 52px;
   }
 
   .header {
@@ -1470,10 +1808,17 @@ html {
     border-radius: 0;
     height: 50px;
     font-size: 20px;
+    margin-left: 47px;
 
-    @media only screen and (max-width: 576px) {
+    @media only screen and (max-width: 767px) {
       width: 100%;
-      margin-top: 20px;
+      margin-top: 10px;
+      margin-left: 0;
+    }
+
+    @media (min-width: 768px) and (max-width: 900px) {
+      margin-left: 0;
+      width: 100%;
     }
   }
 
@@ -1491,19 +1836,40 @@ html {
   margin-top: 13px;
   background: #ececec !important;
 
+  @media only screen and (max-width: 576px) {
+    padding-top: 55px;
+    margin-top: 19px;
+    background: #ececec !important;
+  }
+
+  .footer-phone-links {
+    @media only screen and (max-width: 576px) {
+      margin-top: -37px;
+    }
+  }
+
+  .footer-phone-social-media {
+    @media only screen and (max-width: 576px) {
+      margin-top: 11px;
+    }
+  }
+
   hr {
-    margin-top: 60px;
-    margin-bottom: 40px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-top: 49px;
+    margin-bottom: 24px;
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
     width: 90%;
 
     @media only screen and (max-width: 576px) {
-      width: 84%;
+      width: 91%;
+      margin-top: 62px;
     }
   }
 
   .address {
     color: rgba(21, 20, 57, 0.6);
+    font-size: 15px;
+    line-height: 26px;
   }
 
   img {
@@ -1512,6 +1878,8 @@ html {
 
   .logo.link {
     margin-top: 9px;
+    margin-bottom: 35px;
+
     @media only screen and (max-width: 768px) {
       text-align: center;
       display: block;
@@ -1611,7 +1979,7 @@ html {
     }
 
     .padding-container {
-      width: 600px;
+      width: 585px;
       margin-left: auto;
 
       @media only screen and (max-width: 992px) {
@@ -1888,6 +2256,32 @@ html {
   }
 }
 
+.testimonial.product {
+  margin-top: 8px;
+  background-color: white;
+
+  .quote-container {
+    padding-left: 16px;
+    min-height: 496px;
+
+    .quote {
+      margin-top: 65px;
+    }
+
+    .header {
+      margin-top: 22px;
+    }
+  }
+
+  img {
+    max-height: 496px;
+  }
+}
+
+.why_scottish_pacific.product {
+  margin-top: 18px;
+}
+
 /*
 * WHO DOES SECTION
 */
@@ -1905,7 +2299,7 @@ html {
 
   .left {
     margin-top: 99px;
-    margin-left: 134px;
+    margin-left: 115px;
 
     @media only screen and (min-width: 1500px) {
       margin-left: 0;
@@ -1940,7 +2334,7 @@ html {
   }
 
   .right {
-    margin-top: 114px;
+    margin-top: 110px;
     margin-left: 142px;
     width: 679px;
 
@@ -2024,9 +2418,9 @@ html {
 * WHICH SOLUTION SECTION
 */
 .which_solution {
-  height: 295px;
+  height: 291px;
   display: flex;
-  padding-left: 239px;
+  padding-left: 220px;
   align-items: center;
   background: #f3ffea;
 
@@ -2049,8 +2443,8 @@ html {
     line-height: 52px;
     letter-spacing: 0.5px;
     color: $color_blue;
-    margin-left: 34px;
-    margin-top: 3px;
+    margin-left: 41px;
+    margin-top: -1px;
 
     @media only screen and (max-width: 576px) {
       font-size: 26px;
@@ -2062,9 +2456,9 @@ html {
   }
 
   i {
-    font-size: 90px;
-    color: $color_blue;
-    margin-top: 10px;
+    font-size: 82px;
+    color: #5124fb;
+    margin-top: 5px;
 
     @media only screen and (max-width: 576px) {
       font-size: 84px;
@@ -2084,7 +2478,6 @@ html {
     background: $color_blue;
     border-radius: 0;
     margin-left: 109px;
-    margin-top: 6px;
 
     @media only screen and (max-width: 576px) {
       margin-left: 0;
@@ -2214,6 +2607,25 @@ html {
       }
     }
   }
+}
+
+/*
+* PRODUCT TRUSTPILOT SECTION
+*/
+.trustpilot.product {
+  background: white !important;
+}
+
+.call_us_today.product {
+  margin-top: -14px !important;
+}
+
+.subscribe.product {
+  margin-top: 13px;
+}
+
+.footer.product {
+  padding-top: 85px;
 }
 
 /*=========================================================
@@ -2368,7 +2780,7 @@ html {
     }
 
     .header {
-      margin-top: 105px !important;
+      margin-top: 102px !important;
 
       .color-pink {
         @media only screen and (max-width: 576px) {
@@ -2378,6 +2790,9 @@ html {
     }
 
     .description {
+      margin-top: 33px;
+      width: 818px;
+
       @media only screen and (max-width: 768px) {
         width: auto !important;
       }
@@ -2443,7 +2858,7 @@ html {
 * HOW TO PARTNER WITH US SECTION
 */
 .partner_with_us {
-  margin-top: 0;
+  margin-top: 16px;
   background: #e2ddfd;
   height: auto;
   background: rgba(226, 221, 253, 0.5);
@@ -2454,7 +2869,7 @@ html {
 
   .main-header {
     .header {
-      margin-top: 101px !important;
+      margin-top: 102px !important;
 
       @media only screen and (max-width: 576px) {
         margin-top: 68px !important;
@@ -2543,7 +2958,7 @@ html {
 
   .form-container {
     width: 770px;
-    margin: 70px auto 155px auto;
+    margin: 70px auto 139px auto;
 
     @media only screen and (max-width: 820px) {
       padding: 0 20px;
@@ -2633,15 +3048,19 @@ html {
 * PARTNERS TRUSTPILOT SECTION
 */
 .partners_trustpilot {
-  background: $color_gray;
+  background: white !important;
 }
 
 /*
 * BECOME A PARTNER SECTION
 */
 .become_a_partner {
+  margin-top: 0px !important;
+  height: 273px;
+
   .call_us_today-container {
-    flex-direction: column !important;
+    height: 273px;
+    display: block;
   }
 
   .header {
@@ -2652,6 +3071,7 @@ html {
     text-align: center;
     letter-spacing: -0.4px;
     color: #ffebff;
+    margin-top: 16px;
 
     @media only screen and (max-width: 576px) {
       font-size: 32px;
@@ -2671,6 +3091,11 @@ html {
     color: #5124fb;
     background: #fedd3e;
     border-radius: 0;
-    margin-top: 22px;
+    width: 245px;
+    margin: 35px auto;
   }
+}
+
+.subscribe.partners {
+  margin-top: 13px;
 }

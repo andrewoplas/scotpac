@@ -143,7 +143,6 @@ b, strong {
   display: block;
   height: 32px;
   width: 32px;
-  line-height: 0px;
   font-size: 0px;
   cursor: pointer;
   background: transparent;
@@ -154,6 +153,8 @@ b, strong {
   border: none;
   outline: none;
   z-index: 1;
+  border: 1px solid #999999;
+  border-radius: 50%;
 }
 
 .slick-prev:hover, .slick-prev:focus,
@@ -177,13 +178,20 @@ b, strong {
 
 .slick-prev:before,
 .slick-next:before {
-  display: block;
-  content: "";
-  width: 32px;
-  height: 32px;
-  opacity: 1;
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 100%;
+  font-family: "Font Awesome 5 Pro";
+  color: #999999;
+  font-size: 17px;
 }
 
 .slick-prev {
@@ -196,11 +204,7 @@ b, strong {
 }
 
 .slick-prev:before {
-  background: url(../i/slick-arrow-left.svg) no-repeat 0 50%;
-}
-
-[dir="rtl"] .slick-prev:before {
-  background: url(../i/slick-arrow-right.svg) no-repeat 100% 50%;
+  content: "\f053";
 }
 
 .slick-next {
@@ -213,11 +217,7 @@ b, strong {
 }
 
 .slick-next:before {
-  background: url(../i/slick-arrow-right.svg) no-repeat 100% 50%;
-}
-
-[dir="rtl"] .slick-next:before {
-  background: url(../i/slick-arrow-left.svg) no-repeat 0 50%;
+  content: "\f054";
 }
 
 /* Dots */
@@ -287,23 +287,6 @@ b, strong {
 
 .slick-slide {
   outline: none;
-}
-
-/* Slick slider Dark arrows */
-.arrows-dark .slick-prev:before {
-  background: url(../i/slick-arrow-left-dark.svg) no-repeat 0 50%;
-}
-
-[dir="rtl"] .arrows-dark .slick-prev:before {
-  background: url(../i/slick-arrow-right-dark.svg) no-repeat 100% 50%;
-}
-
-.arrows-dark .slick-next:before {
-  background: url(../i/slick-arrow-right-dark.svg) no-repeat 100% 50%;
-}
-
-[dir="rtl"] .arrows-dark .slick-next:before {
-  background: url(../i/slick-arrow-left-dark.svg) no-repeat 0 50%;
 }
 
 .container {

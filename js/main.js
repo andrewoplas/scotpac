@@ -22,13 +22,21 @@ $(document).ready(function() {
   });
 
   // Mega Menu
-  // $('.mega-menu').hide();
-  $('.solutions-dropdown').dropdown();
-  $('.solutions-dropdown').on('shown.bs.dropdown', function() {
+  $('.mega-menu').hide();
+  $('.dropdown-toggle').dropdown();
+	$(".dropdown").on("show.bs.dropdown", function () {
     $('.mega-menu').show();
-  });
-
-  $('.solutions-dropdown').on('hidden.bs.dropdown', function() {
+	});
+	
+	$(".dropdown").on("hidden.bs.dropdown", function () {
     $('.mega-menu').hide();
+	})
+
+  // Trustpilot carousel
+  $('.trustpilot-carousel').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    speed: 300,
   });
 });

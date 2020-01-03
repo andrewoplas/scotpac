@@ -83,17 +83,17 @@ function SF_scripts(){
 		return [zIndex, section];
 	}
 	
-	// Set highest z-index for section, that has opened dropdown
-	$(".dropdown").on("show.bs.dropdown", function () {
-		var section = SF_dropdown_parent($(this));
-		section.css("z-index",SF_highest_zIndex()[0]+1);	
-	});
+	// // Set highest z-index for section, that has opened dropdown
+	// $(".dropdown").on("show.bs.dropdown", function () {
+	// 	var section = SF_dropdown_parent($(this));
+	// 	section.css("z-index",SF_highest_zIndex()[0]+1);	
+	// });
 	
-	// Remove z-index for section, where dropdown was closed
-	$(".dropdown").on("hidden.bs.dropdown", function () {
-		var section = SF_dropdown_parent($(this));
-		section.css("z-index","auto");	
-	})
+	// // Remove z-index for section, where dropdown was closed
+	// $(".dropdown").on("hidden.bs.dropdown", function () {
+	// 	var section = SF_dropdown_parent($(this));
+	// 	section.css("z-index","auto");	
+	// })
 	
 	// Navigation dropdown popup
 
