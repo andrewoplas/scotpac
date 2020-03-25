@@ -1,0 +1,1013 @@
+/*=========================================================
+                        SOLUTIONS PAGE
+=========================================================*/
+.solutions {
+  /*
+  * SOLUTIONS LANDING SECTION
+  */
+  .solutions_landing {
+    height: 745px;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    border-bottom: 16px solid #fedd3e;
+
+    @media only screen and (max-width: 576px) {
+      height: 838px;
+      border-bottom: 0;
+    }
+
+    .left {
+      flex-grow: 0;
+      flex: 1;
+      background: $color_blue;
+      padding-top: 88px;
+
+      .padding-container {
+        width: 584px;
+        margin-left: auto;
+        padding-right: 100px;
+
+        @media screen and (min-width: 992px) and (max-width: 1199px) {
+          width: 470px;
+          padding-right: 35px;
+        }
+
+        @media only screen and (max-width: 991px) {
+          width: 90%;
+        }
+
+        @media only screen and (max-width: 576px) {
+          width: 100%;
+          margin: 0;
+          padding: 0 30px;
+        }
+      }
+
+      .header {
+        font-family: Noto Serif;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 52px;
+        letter-spacing: -0.4px;
+        color: #ffffff;
+
+        @media only screen and (max-width: 576px) {
+          font-size: 36px;
+        }
+      }
+
+      .description {
+        font-family: Poppins;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+        color: #FFFFFF;
+        margin-top: 37px;
+        margin-left: -4px;
+        display: block;
+
+        @media only screen and (max-width: 576px) {
+          margin-top: 17px;
+          margin-left: -3px;
+        }
+      }
+
+      .small-description {
+        display: block;
+        font-family: Poppins;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 26px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-top: 37px;
+        margin-left: -3px;
+
+        @media only screen and (max-width: 576px) {
+          margin-top: 67px;
+          margin-left: -1px;
+          font-size: 12px;
+          letter-spacing: 1px;
+        }
+      }
+
+      .grid {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        
+        &.first-row {
+          margin-top: 44px;
+          margin-left: -3px;
+
+          @media only screen and (max-width: 576px) {
+            margin-top: 33px;
+            margin-left: 0;
+          }
+        }
+
+        &.second-row {
+          margin-top: 17px;
+
+          @media only screen and (max-width: 576px) {
+            margin-top: 39px;
+          }
+        }
+
+        .item {
+          flex-basis: 25%;
+
+          @media only screen and (max-width: 576px) {
+            flex-basis: 20%;
+          }
+
+          .icon {
+            display: block;
+            font-size: 37px;
+          }
+
+          .title {
+            font-family: Poppins;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 21px;
+            letter-spacing: -0.4px;
+
+            @media only screen and (max-width: 576px) {
+              font-size: 13px;
+              line-height: 18px;
+            }
+          }
+
+          &.buy-equipment {
+            margin-left: -23px;
+            .icon {
+              font-size: 38px;
+            }
+            .title {
+              margin-top: 3px;
+            }
+          }
+
+          &.pay-wages {
+            margin-left: 6px;
+            .icon {
+              font-size: 33px;
+              margin-top: -1px;
+            }
+            .title {
+              margin-top: 20px;
+              margin-left: 10px;        
+            }
+          }
+
+          &.buy-stock {
+            margin-top: -6px;
+            .icon {
+              font-size: 48px;
+              margin-left: 4px;
+              margin-top: -1px;
+            }
+            .title {
+              margin-top: 12px;
+              margin-left: 5px;       
+            }
+          }
+
+          &.fund-expansion {
+            .icon {
+              font-size: 36px;
+              margin-top: 1px;
+              margin-left: 16px;
+            }
+            .title {
+              margin-top: 8px;
+              margin-left: 17px;      
+            }
+          }
+
+          &.cash-flow {
+            .icon {
+              margin-left: -51px;
+              font-size: 40px;
+            }
+            .title {
+              margin-top: 5px;
+              margin-left: -48px;
+            }
+          }
+
+          &.pay-debt {
+            .icon {
+              margin-left: -19px;
+              font-size: 32px;
+              margin-top: 8px;
+            }
+            .title {
+              margin-top: 13px;
+              margin-left: -20px;
+            }
+          }
+
+          &.refinance {
+            .icon {
+              margin-top: 3px;
+              font-size: 37px;
+              margin-left: -9px;
+            }
+            .title {
+              margin-top: 14px;
+              margin-left: -8px;
+            }
+          }
+
+          &.import-goods {
+            .icon {
+              margin-top: 4px;
+              margin-left: 16px;
+              font-size: 36px;
+            }
+            .title {
+              margin-top: 6px;
+              margin-left: 13px;
+            }
+          }
+
+          @media only screen and (max-width: 576px) {
+            &.buy-equipment {
+              margin-left: -5px;
+              .icon {
+                font-size: 38px;
+              }
+              .title {
+                margin-top: 6px;
+                margin-left: 1px;
+              }
+            }
+    
+            &.pay-wages {
+              margin-left: 9px;
+              .icon {
+                font-size: 33px;
+                margin-top: -1px;
+              }
+              .title {
+                margin-top: 12px;
+                margin-left: 3px;       
+              }
+            }
+    
+            &.buy-stock {
+              margin-top: -6px;
+              .icon {
+                font-size: 48px;
+                margin-left: 21px;
+                margin-top: 1px;
+              }
+              .title {
+                margin-top: 1px;
+                margin-left: 20px;       
+              }
+            }
+    
+            &.fund-expansion {
+              .icon {
+                font-size: 36px;
+                margin-top: 0px;
+                margin-left: 8px;
+              }
+              .title {
+                margin-top: 8px;
+                margin-left: 17px;      
+              }
+            }
+    
+            &.cash-flow {
+              .icon {
+                margin-left: 0px;
+                font-size: 40px;
+              }
+              .title {
+                margin-top: 7px;
+                margin-left: -3px;
+              }
+            }
+    
+            &.pay-debt {
+              .icon {
+                margin-left: 0;
+                font-size: 29px;
+                margin-top: 7px;
+              }
+              .title {
+                margin-top: 10px;
+                margin-left: 0;
+              }
+            }
+    
+            &.refinance {
+              .icon {
+                margin-top: 3px;
+                font-size: 37px;
+                margin-left: -5px;
+              }
+              .title {
+                margin-top: 7px;
+                margin-left: -5px;
+              }
+            }
+    
+            &.import-goods {
+              .icon {
+                margin-top: 6px;
+                margin-left: 3px;
+                font-size: 32px;
+              }
+              .title {
+                margin-top: 9px;
+                margin-left: 0px;
+              }
+            }
+          }
+        }
+
+      }
+    }
+
+    .right {
+      flex-grow: 0;
+      flex: 1;
+      background: url(../i/solutions_landing.png);
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: cover;
+
+      .triangle {
+        top: 119px;
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-top: 43px solid transparent;
+        border-left: 43px solid $color_blue;
+        border-bottom: 44px solid transparent;
+        z-index: 1;
+      }
+    }
+  }
+
+  /*
+  * TESTIMONIAL SECTION
+  */
+  .testimonial {
+    margin-top: 17px;
+  }
+
+  /*
+  * OUR SOLUTIONS SECTION
+  */
+  .our_solutions {
+    margin-top: 0;
+    padding-bottom: 101px;
+    background-color: white;
+    height: auto !important;
+
+    @media only screen and (max-width: 767px) {
+      background: #ECECEC;
+      margin-top: 17px !important;
+      padding-bottom: 75px;
+    }
+
+    .main-header {
+      @media only screen and (max-width: 767px) {
+        padding: 0 25px;
+      }
+
+      .header {
+        margin-top: 92px;
+
+        @media only screen and (max-width: 767px) {
+          margin-top: 69px;
+          padding: 0 25px;
+          font-size: 28px;
+          line-height: 36px;
+        }
+      }
+
+      .description {
+        margin-top: 30px;
+        width: 818px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 32px;
+        color: #62626D;
+        opacity: 0.7;
+
+        @media only screen and (max-width: 991px) {
+          width: auto !important;
+
+          br {
+            display: none !important;
+          }
+        }
+
+        @media only screen and (max-width: 767px) {
+          font-weight: 500;
+          font-size: 17px;
+          line-height: 26px;
+          opacity: 0.7;
+          margin-top: 16px;
+        }
+      }
+    }
+
+    .add-top {
+      margin-top: 0;
+      @media only screen and (max-width: 767px) {
+        margin-top: 46px;
+      }
+    }
+
+    .item {
+      text-align: center;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      img {
+        align-self: center;
+      }
+
+      .header {
+        font-weight: 600;
+      }
+
+      .description {
+        padding: 0 40px;
+        margin-bottom: 4px;
+      }
+
+      &.invoice-finance {
+        img {
+          margin-top: 28px;
+          margin-left: 45px;
+        }
+        .header {
+          margin-top: 19px;
+          margin-left: 53px;
+        }
+        .description {
+          margin-left: 15px;
+          padding-right: 0;
+          margin-top: 16px;
+        }
+      }
+
+      &.trade-finance {
+        img {
+          margin-top: 27px;
+          margin-left: -11px;
+        }
+        .header {
+          margin-top: 12px;
+        }
+      }
+
+      &.equipment-finance {
+        img {
+          margin-top: 22px;
+          margin-left: -98px;
+        }
+        .header {
+          margin-top: -1px;
+          margin-left: -83px;
+        }
+        .description {
+          margin-left: -40px;
+          margin-top: 16px;
+          padding-left: 0;
+        }
+      }
+
+      @media only screen and (max-width: 991px) {
+        .header, .description, img {
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+
+        br {
+          display: none !important;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        &.invoice-finance {
+          img {
+            width: 140px;
+            margin-top: -14px;
+            margin-left: -3px !important;
+          }
+          .header {
+            margin-top: 5px;
+          }
+          .description {
+            margin-top: 16px;
+          }
+        }
+  
+        &.trade-finance {
+          img {
+            width: 226px;
+            margin-top: -5px;
+            margin-left: -22px !important;
+          }
+          .header {
+            margin-top: 9px;
+            margin-left: -10px !important;
+          }
+        }
+  
+        &.equipment-finance {
+          img {
+            width: 216px;
+            margin-top: -17px;
+          }
+          .header {
+            margin-top: 5px;
+            margin-left: 9px !important;
+          }
+          .description {
+            margin-left: -40px;
+            margin-top: 16px;
+            padding-left: 0;
+          }
+        }
+
+        br.br-xs {
+          display: block !important;
+        }
+      }
+    } 
+  }
+
+  /*
+  * WHY SCOTTISH PACIFIC SECTION
+  */
+  .why_scottish_pacific {
+    margin-top: 18px;
+
+    @media only screen and (max-width: 767px) {
+      margin-top: 21px;
+    }
+  }
+
+  /*
+  * WHAT BEST DESCRIBES SECTION
+  */
+  .tabs_section {
+    margin-top: 15px;
+    background: #E2DEFF;;
+    padding-bottom: 146px;
+
+    .fix-container-width {
+      max-width: 1236px;
+      padding: 0;
+    }
+
+    .tailored-finance {
+      height: 362px;
+      background:  #E2DEFF;
+      position: relative;
+
+      .header {
+        padding-top: 84px;     
+        font-size: 44px;   
+        letter-spacing: -0.4px;
+        color: #5000FE;
+        margin-left: -40px;
+      }
+
+      .description {
+        margin-top: 29px;
+        margin-left: -32px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 32px;
+        text-align: center;
+        color: rgba(21, 20, 57, 0.6);
+        opacity: 0.7;
+      }
+    }
+
+    .business-tabs {
+      margin-top: -79px;
+
+      ul {
+        width: 100%;
+        display: flex;
+
+        li {
+          flex: 1;
+          margin: 0 3px;
+          padding: 0 0 0 30px;
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 32px;
+          background: #ECECEC;
+          cursor: pointer;
+
+          &.active {
+            background: #FFFFFF;
+            box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.25);
+          }
+
+          a {
+            height: 72px;
+            color: #5000fe !important;
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+    }
+
+    .business-tabs-content {
+      margin: 0 3px;
+      padding: 20px 10px 0 10px;
+      display: none;
+      background-color: white;
+      flex-wrap: wrap;
+      position: relative;
+
+      &.active {
+        display: flex !important;
+      }
+
+      .content {
+        padding: 30px 0 30px 27px;
+        margin: 0 10px;
+        flex: 1;
+
+        &:nth-child(1) {
+          background: #ffebfe;
+
+          i {
+            font-size: 102px;
+            margin-top: 25px;
+            margin-left: -7px;
+          }
+        }
+
+        &:nth-child(2) {
+          background: linear-gradient(125.41deg, #f2f2f2 3.53%, #f2f2f2 90.56%);
+
+          i {
+            margin-top: 26px;
+            margin-left: 9px;
+            font-size: 105px;
+          }
+
+          .header {
+            margin-top: 31px;
+          }
+
+          .description {
+            margin-top: 11px;
+          }
+        }
+
+        &:nth-child(3) {
+          background: linear-gradient(123.26deg, #e2deff 1.64%, #e2deff 96.95%);
+
+          i {
+            margin-top: 18px;
+            margin-left: 7px;
+          }
+
+          .description {
+            margin-top: 9px;
+            margin-left: 6px;
+          }
+
+          .header {
+            margin-top: 37px;
+            margin-left: 5px;
+          }
+        }
+
+        &:nth-child(4) {
+          background: #e4f3e3;
+
+          i {
+            margin-left: 11px;
+            margin-top: 18px;
+            font-size: 110px;
+          }
+
+          .header {
+            margin-top: 32px;
+            margin-left: 3px;
+          }
+
+          .description {
+            margin-top: 9px;
+            margin-left: 2px;
+          }
+        }
+
+        .header {
+          margin-top: 42px;
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 27px;
+          line-height: 52px;
+          letter-spacing: -0.4px;
+          color: #5026e7;
+
+          i {
+            display: inline-block;
+            margin-left: 8px;
+            margin-bottom: 10px;
+            font-size: 15px;
+          }
+        }
+
+        .description {
+          margin-top: 6px;
+          display: block;
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 17px;
+          line-height: 26px;
+          color: #5026e7;
+        }
+      }
+
+      .other-industries {
+        width: 100%;
+        padding: 23px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 32px;
+        text-decoration-line: underline;
+        color: #5000fe;
+        margin-top: 4px;
+      }
+    }
+  }
+
+  .tabs_section_xs {
+    background: #bfdaf7;
+    padding-bottom: 21px;
+    margin-top: 18px !important;
+
+    .tailored-finance {
+      position: relative;
+      padding-top: 40px;
+      padding-bottom: 25px;
+
+      .header {
+        padding: 0 40px;
+        font-family: Noto Serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 32px;
+        text-align: center;
+        letter-spacing: -0.4px;
+        color: #5124fb;
+      }
+
+      .description {
+        margin-top: 33px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 32px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.9);
+      }
+    }
+
+    .business-tabs {
+      margin-top: 13px;
+
+      .business-select {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 28px;
+        color: #5000fe;
+        background-color: white;
+        display: block;
+        width: 100%;
+        border-radius: 0;
+        padding: 15px 10px;
+      }
+    }
+
+    .business-tabs-content {
+      margin: 3px 0 0 0;
+      padding: 20px 10px 0 10px;
+      display: none;
+      flex-direction: column;
+      background-color: white;
+
+      &.active {
+        display: flex !important;
+      }
+
+      .content {
+        padding: 25px 22px;
+        padding-right: 5px;
+        margin: 0 10px 20px 10px;
+        flex: 1;
+
+        &:nth-child(1) {
+          background: #ffebfe;
+
+          i {
+            font-size: 59px;
+            margin-top: 5px;
+            margin-left: -4px;
+          }
+
+          .header {
+            margin-left: -4px;
+            margin-top: 14px;
+          }
+
+          .description {
+            margin-top: -10px;
+            margin-left: -4px;
+          }
+        }
+
+        &:nth-child(2) {
+          background: linear-gradient(125.41deg, #f2f2f2 3.53%, #f2f2f2 90.56%);
+
+          i {
+            margin-top: 10px;
+            margin-left: -3px;
+          }
+
+          .header {
+            margin-top: 13px;
+            margin-left: -4px;
+          }
+
+          .description {
+            margin-top: -6px;
+            margin-left: -3px;
+          }
+        }
+
+        &:nth-child(3) {
+          background: linear-gradient(123.26deg, #e2deff 1.64%, #e2deff 96.95%);
+
+          i {
+            margin-top: 5px;
+            margin-left: -4px;
+          }
+
+          .header {
+            margin-top: 15px;
+            margin-left: -4px;
+          }
+
+          .description {
+            margin-top: -7px;
+            margin-left: -4px;
+          }
+        }
+
+        &:nth-child(4) {
+          margin-bottom: 0 !important;
+          background: #e4f3e3;
+
+          i {
+            font-size: 74px;
+            margin-left: 3px;
+          }
+
+          .header {
+            margin-top: 9px;
+            margin-left: -4px;
+          }
+
+          .description {
+            margin-top: -7px;
+            margin-left: -4px;
+          }
+        }
+
+        .header {
+          margin-top: 24px;
+          font-family: Poppins;
+          font-weight: 600;
+          font-size: 28px;
+          line-height: 52px;
+          letter-spacing: -0.4px;
+          color: $color_blue;
+
+          i {
+            display: inline-block;
+            margin-left: 8px;
+            margin-bottom: 20px;
+            font-size: 15px;
+          }
+        }
+
+        .description {
+          display: block;
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 17px;
+          line-height: 26px;
+          color: #5026e7;
+        }
+      }
+
+      .other-industries {
+        width: 100%;
+        padding: 29px 35px 26px 35px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 32px;
+        text-decoration-line: underline;
+        color: #5000fe;
+      }
+    }
+  }
+
+  /*
+  * TRUSTPILOT SECTION
+  */
+  .trustpilot {
+    background-color: white;
+
+    @media only screen and (max-width: 767px) {
+      margin-top: 18px;
+      background: #F2F2F2;
+    }
+  }
+
+  /*
+  * CALL US TODAY SECTION
+  */
+  .call_us_today {
+    margin-top: 21px !important;
+
+    .call_us_today-container {
+      height: 283px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      margin-top: 15px !important;
+
+      .call_us_today-container {
+        height: auto;
+        padding: 54px 28px;
+      }
+    }
+  }
+
+  /*
+  * SUBSCRIBE SECTION
+  */
+  .subscribe {
+    margin-top: 15px !important;
+
+    @media only screen and (max-width: 767px) {
+      margin-top: 13px !important;
+      margin-top: 0px !important;
+      padding: 31px 27px;
+      background-color: white;
+    }
+  }
+
+  /*
+  * FOOTER SECTION
+  */
+  .footer {
+    margin-top: 17px !important;
+
+    @media only screen and (max-width: 576px) {
+      margin-top: 41px !important;
+    }
+  }
+}
